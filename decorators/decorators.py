@@ -19,8 +19,6 @@ def retry_decorator(retry_count, timeout):
 
 
 def timer(original_function):
-    import time
-
     def wrapper(*args, **kwargs):
         t1 = time.time()
         result = original_function(*args, **kwargs)
